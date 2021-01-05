@@ -1,6 +1,8 @@
 name: Test
 on: push
 
+x-test-var: test
+
 jobs:
   user-defined-variable:
     name: User defined variable
