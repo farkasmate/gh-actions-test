@@ -1,0 +1,10 @@
+name: Test
+on: push
+
+jobs:
+  user-defined-variable:
+    name: User defined variable
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo 'Hello World'
