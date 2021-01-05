@@ -3,11 +3,12 @@ on: push
 
 env:
   TEST_VAR: test
+  TEST_IMAGE: ubuntu-latest
 
 jobs:
   user-defined-variable:
     name: User defined variable
-    runs-on: ubuntu-latest
+    runs-on: ${{ env.TEST_IMAGE }}
     steps:
       - name: Hello World
         run: echo 'Hello World'
