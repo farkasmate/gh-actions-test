@@ -1,7 +1,8 @@
 name: Test
 on: push
 
-x-test-var: test
+env:
+  TEST_VAR: test
 
 jobs:
   user-defined-variable:
@@ -10,3 +11,5 @@ jobs:
     steps:
       - name: Hello World
         run: echo 'Hello World'
+      - name: Hello TEST
+        run: echo "Hello ${TEST_VAR}"
